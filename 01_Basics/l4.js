@@ -7,8 +7,10 @@ accountCity="Jaipur" //will be var by nature
 // let accountEmail="shubham@uber.com" // let cant be redefined.
 accountEmail="sp@uber.com"
 accountPassword="54321"
-accountCity="Bengaluru"
-console.table([accountId,accountEmail, accountPassword, accountCity])
+var accountCity="Bengaluru-2" //var can be redefined.
+// accountCity="Bengaluru"
+var accountSettings //undefined
+console.table([accountId,accountEmail, accountPassword, accountCity, accountSettings])
 
 /*
 this is a multi
