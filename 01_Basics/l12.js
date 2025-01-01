@@ -1,7 +1,8 @@
 // Numbers
-// const score=400
+const score=400
 // console.log(score)
 // console.log(typeof score)
+// console.log(score.toString())
 
 // const balance=new Number(5000)
 // console.log(balance)
@@ -16,5 +17,5 @@
 // console.log(Number.MAX_SAFE_INTEGER)
 
 // MATHS
-console.log(Math.floor(41.99))
+// console.log(Math.floor(41.99))
 // console.log(Number.abs(-4))
