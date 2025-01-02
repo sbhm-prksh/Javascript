@@ -1,4 +1,5 @@
 let a=new String("Shreya")
-console.log(a.at(3))
+a[0]='P'
+console.log(a)
 
 
