@@ -1,4 +1,4 @@
-let myDate= new Date()
-console.log(`Current Year is ${myDate.getFullYear()}. And the date/day is ${myDate.getDate()}/${myDate.getDay()}. ${myDate.getHours()}`)
+let a=new String("Shreya")
+console.log(a.at(3))
 
 
