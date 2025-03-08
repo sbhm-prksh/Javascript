@@ -17,7 +17,7 @@ let booleanIsLoggedIn= Boolean(isLoggedIn)
 console.log(booleanIsLoggedIn)
 // //////////////////////////////////////////
 // String conversion
-let someNumber="shreya"
+let someNumber=123456;
 let stringNumber=String(someNumber)
 console.log(stringNumber)
 console.log(typeof stringNumber)
