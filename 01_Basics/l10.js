@@ -1,12 +1,15 @@
 // Stack and heap memory
+
 // Pass by value
 let myTwitter="sbhm_prksh"
-let myWebsite="sbhmprksh.in"
+let myWebsite=myTwitter;
 console.log(myTwitter)
 console.log(myWebsite)
 myWebsite="shubhamprakash.in"
 console.log(myTwitter)
 console.log(myWebsite)
+
+
 // Pass by reference
 let jobOne={
     company:"google",

@@ -21,6 +21,15 @@ console.log(typeof num1)
 // const myFunction= function(){
 //     console.log("Hello World")
 // }
+// BELOW IS INCORRECT
+// function ()
+// {
+//     console.log("Good Morning");
+// }
+// function greet()
+// {
+//     console.log("Good Morning");
+// }
 // console.log(typeof hero)
 // console.log(typeof myObj)
 // console.log(typeof myFunction)
