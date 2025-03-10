@@ -4,11 +4,10 @@ const score=400
 // console.log(typeof score)
 // console.log(score.toString())
 
-// const balance=new Number(5000)
-// console.log(balance)
-// console.log(typeof balance)
-
-// console.log(balance.toString())
+const balance=new Number(5000)
+console.log(balance)
+console.log(typeof balance)
+console.log(balance.toString())
 // console.log(typeof (balance.toString()))
 // console.log(balance.toFixed())
 // console.log(balance.toPrecision(1))
