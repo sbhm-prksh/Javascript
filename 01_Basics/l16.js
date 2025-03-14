@@ -51,6 +51,7 @@ let obj = {
 console.log(obj)
 console.log(typeof obj[mySymbol]); //is a string.
 console.log(obj[mySymbol]);
-// console.log(obj["mySymbol"]); // will give undefined.
+// console.log(obj["mySymbol"]); // will give undefined. "mySymbol" is just a string, but in obj, there is no key named "mySymbol" (the key is a Symbol, not a string).
+
 
 
