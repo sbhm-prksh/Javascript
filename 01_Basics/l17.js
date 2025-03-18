@@ -62,7 +62,3 @@ let entries=Object.entries(student);
 // console.log(entries);
 console.log(student.hasOwnProperty('name'));
 console.log(student.hasOwnProperty('roll no'));
-
-
- 
-
