@@ -23,6 +23,25 @@ function addTwoNumbers(number1, number2)
 // addTwoNumbers("abcd");
 // addTwoNumbers(1, null);
 // addTwoNumbers("1", null);
-let result=addTwoNumbers(3,5); //result will be undefined
+// let result=addTwoNumbers(3,5); //result will be undefined
 // console.log(result)
+
+// FUNCTIONS
+function loginUserMessage(username)
+{
+    return `${username} just logged in!`;
+}
+loginUserMessage("Shreya"); //will not get print
+console.log(loginUserMessage("Shreya"));
+console.log(loginUserMessage(""));
+console.log(loginUserMessage());
+
+// DEFAULT PARAMETERS
+function greet(user="Sam")
+{
+    return `Hello! ${user}`
+}
+console.log(greet());
+console.log(greet("Radha"))
+
 
