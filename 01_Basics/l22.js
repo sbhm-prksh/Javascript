@@ -21,7 +21,7 @@ function addOne(num)
 {
     return num+1;
 }
-console.log(addTwo(5)) //DOESNT WORKS
+console.log(addTwo(5)) //DOESNT WORKS WHEN A VARIABLE HOLDS A FUNCTION
 let addTwo=function(num)
 {
     return num+1;
