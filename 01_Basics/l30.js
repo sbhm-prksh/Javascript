@@ -46,7 +46,19 @@ let newerMandi=mandi.map((items)=>{
 })
 console.log(newerMandi)
 
-
-
 // REDUCE
+let cartPrice=[1,2,3,4,5];
+let totalPrice= cartPrice.reduce(function(accumulator, currentValue)
+{
+    // console.log(`Accumulator value is ${accumulator} \nCurrent Value is: ${currentValue}`)
+    return accumulator+currentValue;
+}, 0);
+// Using arrow function
+let totalPrice2=cartPrice.reduce((acc, cV)=>(acc+cV), 0);
+console.log(totalPrice)
+console.log(totalPrice2)
 
+// Application of reduce
+let shoppingCart=[{itemName:"JS Course", price:999},{itemName:"Python Course", price:999}, {itemName:"Cpp Course", price:999}]
+let totalPrice3=shoppingCart.reduce((acc, currentVal)=>(acc+currentVal["price"]),0)
+console.log(totalPrice3)
