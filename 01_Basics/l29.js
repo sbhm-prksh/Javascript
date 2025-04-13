@@ -78,12 +78,20 @@ function print(element)
 // FOR EACH WITH ARRAY OF OBJECTS.
 let myComp=[{compName:"google", ctc:"5200000"}, {compName:"deshaw", ctc:"5100000"}, {compName:"zomato", ctc:"5600000"}];
 myComp.forEach((item)=>{
-    console.log(item.compName)
-    
-})
-// FOR EACH WITH STRING. DOESNT WORKS!!!!
-let myComp2="Google"
-myComp2.forEach((item)=>{
     console.log(item)
-    
 })
+// // FOR EACH WITH STRING. DOESNT WORKS!!!!
+// let myComp2="Google"
+// myComp2.forEach((item)=>{
+//     console.log(item)
+    
+// })
+
+
+// FOREACH DOESNT RETURN ANYTHING. EVEN IF YOU TRY, IT WILL BE IGNORED.
+const coding=['js','ruby', 'java','python','cpp']
+let a=coding.forEach((items)=>{
+    console.log(items)
+    return items;
+})
+console.log(a)
