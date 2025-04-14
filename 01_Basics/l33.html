@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM| Chai aur Code</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <div class="parent" >
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        Shubham
+        Prakash
+        <!-- THIS IS A COMMENT -->
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    let parent=document.querySelector('.parent');
+    // console.log(parent)
+
+    // CHILDREN
+    let childs=parent.children
+    console.log(childs) // gives all the childrens as HTML Collection
+
+    // console.log(childs[0].innerHTML)
+    // for (let i = 0; i < childs.length; i++) {
+    //     let element = childs[i];
+    //     console.log(element)
+    // }
+
+    // // FIRST CHILD
+    // console.log(parent.firstElementChild)
+
+    // // LAST CHILD
+    // console.log(parent.lastElementChild)
+
+    // // PARENT
+    // let dayOne=document.querySelector('.day');
+    // console.log(dayOne)
+    // let parentOfDayOne= dayOne.parentElement;
+    // console.log(parentOfDayOne)
+
+    // // NEXT SIBLING
+    // let nextOfDayOne=dayOne.nextElementSibling;
+    // console.log(nextOfDayOne)
+
+    // CHILD NODES
+    let myChildNodes=document.querySelector('.parent').childNodes;
+    console.log(myChildNodes)
+
+
+</script>
+</html>
