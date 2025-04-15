@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 70vh;
+
+            background-color: white;
+            text-align: center;
+        }
+        #mainBox{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            margin: auto;
+            padding: 30px;
+            width: 80%;
+            height: 400px;
+
+            background-color: #212121;
+            color: white;
+
+            border-radius: 15px;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+
+            width: 80%;
+            margin: 20px;
+        }
+        .colorChanger{
+            margin: 20px;
+            width: 120px;
+            height: 120px;
+
+            border: none;
+            cursor:pointer;
+        }
+        #aquamarine{
+            background-color: aquamarine;
+        }
+        #burlywood{
+            background-color: burlywood;
+        }
+        #grey{
+            background-color: grey;
+        }
+        #rosybrown{
+            background-color: rosybrown;
+        }
+    </style>
+</head>
+<body>
+    <div id="mainBox">
+        <div class="container" id="container1"><h1>Background Color Changer</h1></div>
+        <div class="container" id="container2">
+            <button class="colorChanger" id="aquamarine"></button>
+            <button class="colorChanger" id="burlywood"></button>
+            <button class="colorChanger" id="grey"></button>
+            <button class="colorChanger" id="rosybrown"></button>
+        </div>
+        <div class="container" id="container3"> <h2>Try Clicking on one of the above colors to change the background color of this page!</h2>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
