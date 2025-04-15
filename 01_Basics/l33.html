@@ -23,28 +23,27 @@
     // CHILDREN
     let childs=parent.children
     console.log(childs) // gives all the childrens as HTML Collection
+    console.log(childs[0].innerHTML)
+    for (let i = 0; i < childs.length; i++) {
+        let element = childs[i];
+        console.log(element)
+    }
 
-    // console.log(childs[0].innerHTML)
-    // for (let i = 0; i < childs.length; i++) {
-    //     let element = childs[i];
-    //     console.log(element)
-    // }
+    // FIRST CHILD
+    console.log(parent.firstElementChild)
 
-    // // FIRST CHILD
-    // console.log(parent.firstElementChild)
+    // LAST CHILD
+    console.log(parent.lastElementChild)
 
-    // // LAST CHILD
-    // console.log(parent.lastElementChild)
+    // PARENT
+    let dayOne=document.querySelector('.day');
+    console.log(dayOne)
+    let parentOfDayOne= dayOne.parentElement;
+    console.log(parentOfDayOne)
 
-    // // PARENT
-    // let dayOne=document.querySelector('.day');
-    // console.log(dayOne)
-    // let parentOfDayOne= dayOne.parentElement;
-    // console.log(parentOfDayOne)
-
-    // // NEXT SIBLING
-    // let nextOfDayOne=dayOne.nextElementSibling;
-    // console.log(nextOfDayOne)
+    // NEXT SIBLING
+    let nextOfDayOne=dayOne.nextElementSibling;
+    console.log(nextOfDayOne)
 
     // CHILD NODES
     let myChildNodes=document.querySelector('.parent').childNodes;
