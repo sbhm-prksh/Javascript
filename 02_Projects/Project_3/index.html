@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Time</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #212121;
+            color: white;
+            height: 80vh;
+        }
+        .center{
+            display: flex;
+            flex-direction: column;
+            /* height: 45% ; */
+            width: 45%;
+            background-color: darkslategray;
+            border: 2px solid white;
+            border-radius: 30px;
+            padding: 20px;
+        }
+        #banner{
+            padding: 15px;
+            font-size: 40px;
+            text-align: center;
+        }
+        #clock{
+            padding: 10px;
+            margin-top: 30px;
+            padding: 15px;
+            background-color: orange;
+            border-radius: 20px;
+            height: 80px;
+            font-size: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div id="banner"><span>New Delhi's Local Time</span></div>
+        <div id="clock"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
