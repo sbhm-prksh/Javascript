@@ -10,9 +10,10 @@ form.addEventListener('submit', (e)=>{
     });
 
     // GETTING VALUE OF INPUT/SELECTBOX OR TEXTAREA
+    console.log(document.querySelector('#height').value)
     let height=Number(document.querySelector('#height').value)
     let weight=Number(document.querySelector('#weight').value)
-
+    console.log(height)
     // ERROR HANDELING
     if(height<=0 || weight<=0)
     {
@@ -50,7 +51,10 @@ form.addEventListener('reset', (e)=>{
     });
 
     // REMOVING BMI RESULT PARAGRAPH
-    document.querySelector('#finalOutput').remove()
+    if(document.querySelector('#finalOutput')!=null) //CHECKING WHETHER THAT ELEMENT IS PRESENT OR NOT. BECAUSE USER CAN CLICK RESET JUST AFTER LANDING ON THE PAGE
+    {
+        document.querySelector('#finalOutput').style.display='none'
+    }
 
 
 })
