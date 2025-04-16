@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: #343333;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            height: 80vh;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid green; */
+        }
+        .mainBox{
+            /* border: 2px solid red; */
+            background-color:#151515;
+            display: flex;
+            flex-direction: column;
+            height: 1500px;
+            width: 70%;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            margin-top: 100px;
+            padding: 10px;
+        }
+        .container{
+            /* border: 2px solid yellow; */
+            margin: 10px;
+            padding: 10px;
+            width: 80%;
+        }
+        #container1{
+            padding: 0px;
+        }
+        h1{
+            margin: 0px;
+        }
+        #container2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .input{
+            box-sizing: border-box;
+            display: inline-block;
+            width: 350px;
+            padding: 10px;
+            margin: 10px;
+            border:none;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .button{
+            display: inline;
+            width: 163px;
+        }
+        #calculate{
+            cursor: pointer;
+            border: none;
+            font-size: 15px;
+        }
+        #calculate:hover{
+            background-color: #343333;
+            color: white;
+        }
+        #reset{
+            cursor: pointer;
+            border: none;
+            font-size: 15px;
+        }
+        #reset:hover{
+            background-color: #343333;
+            color: white;
+        }
+        #result{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            margin: 0px;
+        }
+        #finalOutput{
+            width: 340px;
+            font-size: 17px;
+            background-color: white;
+            border: 2px solid white;
+            border-radius: 15px;
+            padding: 15px;
+            color: black;
+            padding: 10px;
+            margin: 10px;
+            margin: 0px;
+        }
+        #container4{
+            display: flex;
+            flex-direction: column;
+        }
+        table{
+            border-collapse: collapse;
+            box-sizing: border-box;
+            /* border: 2px solid green; */
+            padding: 5px;
+            border: 2px solid white;
+        }
+        thead tr:first-child{
+            background-color: #343333;
+        }
+        tr:nth-child(even)
+        {
+            background-color: #343333;
+
+        }
+        th{
+            width: 40%;
+            padding: 5px 30px;
+            border-bottom: 2px solid white;
+            border-right: 2px solid white;
+            
+        }
+        td{
+            box-sizing: border-box;
+            width: 40%;
+            padding: 5px 30px;
+            border-right: 2px solid white;
+            border-bottom: 1px solid white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mainBox">
+        <div class="container" id="container1">
+            <h1>BMI Calculator</h1>
+        </div>
+        <div class="container" id="container2">
+            <form action="">
+                <div   id="input1">
+                    <input class="input" type="number" name="myHeight" id="height" placeholder="Enter Height(in cm)">
+                </div>
+                <div  id="input2">
+                    <input class="input" type="number" name="myWeight" id="weight" placeholder="Enter Weight(in Kg)">
+                </div>
+                <div id="input3">
+                    <button type="submit" class="input button" id="calculate">Calculate</button>
+                    <button type="reset" class="input button" id="reset">Reset</button>
+                </div>
+            </form>
+            <div class="container" id="result"></div>
+        </div>
+        
+    </div>
+    <div class="mainBox">
+        <div class="container" id="container4">
+            <h2 style="margin: 25px;">BMI Weight Guide</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>BMI</th>
+                        <th>Classification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt;18.5</td>
+                        <td>Underweight</td>
+                    </tr>
+                    <tr>
+                        <td>18.5-24.9</td>
+                        <td>Normal</td>
+                    </tr>
+                    <tr>
+                        <td>25-29.9</td>
+                        <td>Overweight</td>
+                    </tr>
+                    <tr>
+                        <td>&gt;29.9</td>
+                        <td>Obese</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
