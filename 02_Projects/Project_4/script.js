@@ -5,6 +5,8 @@ let guessedNumberString=guessedNumber.join();
 document.getElementById('guessArray').innerHTML=guessedNumberString
 document.getElementById('attemptCount').innerHTML=attemptRemaining
 console.log(targetNum)
+console.log(targetNum)
+
 
 let form=document.querySelector('form')
 form.addEventListener('submit',(evnt)=>{
@@ -52,6 +54,7 @@ form.addEventListener('submit',(evnt)=>{
 form.addEventListener('reset', (evnt)=>{
     evnt.preventDefault();
     targetNum=Math.ceil(1+99*Math.random())
+    console.log(targetNum)
     attemptRemaining=10;
     guessedNumber=[];
     document.getElementById('guessArray').innerHTML=guessedNumberString
