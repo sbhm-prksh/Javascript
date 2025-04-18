@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .darkMode{
+            background-color: black;
+            color: white;
+        }
+        .lightMode{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="start">Start Changing Background</button>
+    <button id="stop">Stop Changing Background</button>
+</body>
+<script>
+    // MAKING A BUTTON TO START CHANGING BACKGROUND AND STOP CHANGING BACKGROUND
+    let start=document.getElementById('start')
+    let stop=document.getElementById('stop')
+    let body=document.querySelector('body')
+    let changeBackground=null; //very important
+    start.addEventListener('click',()=>{
+        if(changeBackground===null) //very important, otherwise we can get multiple same setIntervals
+        {
+            changeBackground=setInterval(()=>{
+                console.log(`${Date.now()}: ${body.className}`)
+                if(body.className=='darkMode')
+                {
+                    body.classList.remove('darkMode')
+                    body.classList.add('lightMode')
+                }
+                else
+                {
+                    body.classList.remove('lightMode')
+                    body.classList.add('darkMode')
+                }
+            },1000)
+        }
+    })
+    stop.addEventListener('click',()=>{
+        console.log("Stopped")
+        clearInterval(changeBackground);
+        changeBackground=null; //setting it back to null in order to run it again
+    })
+</script>
+<script>
+
+</script>
+</html>

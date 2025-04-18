@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // WITHOUT ARGUMENT- NORMAL FUNCTION
+    setTimeout(function(){
+        console.log('a')
+    },100)
+
+    // WITHOUT ARGUMENT- ARROW FUNCTION
+    setTimeout(()=>{
+        console.log("b")
+    }, 200)
+
+    // WITHOUT ARGUMENT- FUNCTION REFERENCE
+    let sayName=function(){
+        console.log("Hello")
+    }
+    setTimeout(sayName, 300);
+
+    // WITH ARGUMENT- NORMAL FUNCTION
+    setTimeout(function(userName){
+        console.log(`User is: ${userName}`)
+    },400, "Shubham")
+
+    // WITHOUT ARGUMENT- ARROW FUNCTION
+    setTimeout((userName)=>{
+        console.log(`Hello ${userName}`)
+    }, 500, "Shreya")
+
+    // WITHOUT ARGUMENT- FUNCTION REFERENCE
+    let greetUser=function(userName){
+        console.log(`Good Evening ${userName}`)
+    }
+    setTimeout(greetUser, 600, "Radha");
+
+    // CHANGING THE HEADING
+    let changeHeading=setTimeout(() => {
+        document.querySelector('h1').innerHTML="Heading has been changed"
+    }, 3000);
+    document.querySelector('button').addEventListener('click',()=>{
+        clearTimeout(changeHeading)
+        console.log("Heading will not change now")
+    })
+</script>
+</html>
