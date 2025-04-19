@@ -1,19 +1,10 @@
+<!-- CHANGING BACKGROUND COLOR -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        .darkMode{
-            background-color: black;
-            color: white;
-        }
-        .lightMode{
-            background-color: white;
-            color: black;
-        }
-    </style>
 </head>
 <body>
     <h1>Chai aur Code</h1>
@@ -22,25 +13,28 @@
 </body>
 <script>
     // MAKING A BUTTON TO START CHANGING BACKGROUND AND STOP CHANGING BACKGROUND
+    // function to generate random colors
+    function randomColor()
+    {
+        let code="0123456789ABCDEF"
+        let color="#"
+        for(let i=0;i<6;i++)
+        {
+            color+=code[Math.floor(Math.random()*16)]
+        }
+        return color;
+    }
     let start=document.getElementById('start')
     let stop=document.getElementById('stop')
     let body=document.querySelector('body')
     let changeBackground=null; //very important
     start.addEventListener('click',()=>{
-        if(changeBackground===null) //very important, otherwise we can get multiple same setIntervals
+        //very important, otherwise we can get multiple same setIntervals and that will create chaos. You will not be able to clear that setInterval because this variable will get override.
+        if(changeBackground===null) 
         {
             changeBackground=setInterval(()=>{
-                console.log(`${Date.now()}: ${body.className}`)
-                if(body.className=='darkMode')
-                {
-                    body.classList.remove('darkMode')
-                    body.classList.add('lightMode')
-                }
-                else
-                {
-                    body.classList.remove('lightMode')
-                    body.classList.add('darkMode')
-                }
+                console.log(Date.now())
+                document.querySelector('body').style.backgroundColor=randomColor();
             },1000)
         }
     })
