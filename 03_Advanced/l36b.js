@@ -1,3 +1,4 @@
+// Shradhha Khapra: Events
 let btn1=document.querySelector('button')
 btn1.addEventListener('click', (e)=>{
     let body=document.querySelector('body')
