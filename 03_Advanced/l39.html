@@ -1,3 +1,4 @@
+<!-- XML HTTP REQUEST -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +19,8 @@
 </body>
 <script>
     let myURL= "https://api.github.com/users/sbhm-prksh"
-    let xhr=new XMLHttpRequest();
-    xhr.open('GET', myURL);
+    let xhr=new XMLHttpRequest(); //CREATING NEW XHR OBJECT WHICH WILL TALK TO THE SERVER WITHOUT REFRESHING PAGE
+    xhr.open('GET', myURL); //JUST SET UP THE REQUEST. DONT SENT IT
     xhr.onreadystatechange=function()
     {
         console.log(xhr.readyState);
@@ -31,10 +32,9 @@
             document.getElementById('image').innerHTML=`<img src="${data.avatar_url}">`;
             document.getElementById('following').innerText=data.following
             document.getElementById('followers').innerText=data.followers
-
         }
     }
-    xhr.send();
+    xhr.send(); // SEND THE REQUEST5
 
 </script>
 </html>
