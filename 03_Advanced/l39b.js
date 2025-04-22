@@ -1,10 +1,12 @@
 let xhr= new XMLHttpRequest();
 xhr.open('GET','https://randomuser.me/api/')
+xhr.send();
 console.log("Loarding")
 xhr.onreadystatechange=function(){
     console.log('State Changing')
     if(xhr.readyState==4)
     {
+        document.querySelector("#userDataLoading").style.display="none"
         console.log("We got the data")
         let data=JSON.parse(this.responseText);
         document.querySelector('#userPhoto').setAttribute('src',`${data["results"][0]["picture"]["large"]}`)
@@ -12,6 +14,6 @@ xhr.onreadystatechange=function(){
         document.querySelector('#userEmail').innerHTML=`${data["results"][0]["email"]}`
         document.querySelector('#userGender').innerHTML=`${data["results"][0]["gender"]}`
         document.querySelector('#userAge').innerHTML=`${data["results"][0]["dob"]["age"]}`
+        document.querySelector("#userData").style.display="block"
     }
 }
-xhr.send();
