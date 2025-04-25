@@ -1,4 +1,4 @@
-FETCH
+// FETCH
 
 // FETCH WITH .THEN
 fetch('https://randomuser.me/api/')
