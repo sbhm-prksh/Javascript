@@ -1,15 +1,15 @@
-// // CALL
+// CALL
 
-// // chatgpt example
-// function greet()
-// {
-//     console.log(this)
-// }
-// let user={
-//     userName:"SP"
-// }
-// greet();
-// greet.call(user); // hey listen, run greet and pretend your are inside the user object
+// chatgpt example
+function greet()
+{
+    console.log(this)
+}
+let user={
+    userName:"SP"
+}
+greet();
+greet.call(user); // hey listen, run greet and pretend your are inside the user object
 
 
 // Hitesh sir example
