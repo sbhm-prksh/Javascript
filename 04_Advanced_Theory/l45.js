@@ -28,20 +28,44 @@
 // console.log(user1)
 // console.log(user1.changeUserName())
 
-// Inheritance
-class User{
+// // Inheritance
+// class User{
+//     constructor(userName)
+//     {
+//         this.userName=userName
+//     }
+// }
+// class admin extends User{
+//     constructor(userName, password)
+//     {
+//         super(userName)
+//         this.userName=userName;
+//         this.password=password;
+//     }
+// }
+// let admin1= new admin("Shubham", "123");
+// console.log(admin1)
+
+// // INSTANCEOF
+// console.log(admin1=== admin)
+// console.log(admin1 instanceof admin)
+
+// STATIC
+class Student{
+    static count=0;
     constructor(userName)
     {
-        this.userName=userName
-    }
-}
-class admin extends User{
-    constructor(userName, password)
-    {
-        // super(userName)
+        Student.count++;
         this.userName=userName;
-        this.password=password;
+    }
+    static studentCount()
+    {
+        return Student.count;
     }
 }
-let admin1= new admin("Shubham", "123");
-console.log(admin1)
+console.log(Student.studentCount())
+const b20021= new Student("Shubham Prakash")
+const umt1800= new Student("Shreya")
+console.log(Student.studentCount())
+console.log(b20021.studentCount())
+
