@@ -40,7 +40,17 @@
     document.getElementById("orange").onclick=clickHander("orange")
     document.getElementById("green").onclick=clickHander("green")
 
-
+    // THIS IN ARROW FUNCTION
+    let obj={
+        greet:"GM",
+        uName:['a','b','c'],
+        speak: function(){
+            this.uName.forEach(function(){
+                console.log(this.greet)
+            })
+        }
+    }
+    obj.speak();
 
 </script>
 </html>
