@@ -1,0 +1,46 @@
+
+<!-- CLOSURE REAL LIFE EXAMPLE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="orange">Click for orange</button>
+    <button id="green">Click for green</button>
+</body>
+<script>
+    // DRY VIOLATION
+    // document.getElementById("orange").onclick=function()
+    // {
+    //     console.log(this)
+    //     document.body.style.backgroundColor=this.id;
+    // }
+    // document.getElementById("green").onclick=function()
+    // {
+    //     console.log(this)
+    //     document.body.style.backgroundColor=this.id;
+    // }
+
+    // function clickHander(color)
+    // {
+    //     document.body.style.backgroundColor=`${color}`;
+    // }
+    // document.getElementById("orange").onclick=clickHander //AS CLICKHANDLER REQUIRES PARAMETER
+    // document.getElementById("orange").onclick=clickHander("green") // IT WILL EXECUTE CLICKHANDLER AND SET BG COLOR TO GREEN IMMEDIATELY
+    function clickHander(color)
+    {
+        return function ()
+        {
+            document.body.style.backgroundColor=`${color}`;
+        }
+    }
+    document.getElementById("orange").onclick=clickHander("orange")
+    document.getElementById("green").onclick=clickHander("green")
+
+
+
+</script>
+</html>
